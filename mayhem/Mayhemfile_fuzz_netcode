@@ -1,0 +1,10 @@
+project: savantenvs/yojimbo
+target: fuzz_netcode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_netcode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_netcode
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/fuzz/dict/fuzz_netcode.dict
