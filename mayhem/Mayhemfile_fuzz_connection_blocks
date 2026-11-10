@@ -1,0 +1,7 @@
+project: savantenvs/yojimbo
+target: fuzz_connection_blocks-mined-3c6b5e8
+cmds:
+  - cmd: /mayhem/fuzz_connection_blocks
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/fuzz/dict/fuzz_connection.dict
